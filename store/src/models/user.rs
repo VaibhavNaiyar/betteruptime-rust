@@ -1,45 +1,41 @@
-user crate::{schema::user , store::Store};
 use crate::store::Store;
 use diesel::prelude::*;
+use uuid::Uuid;
 
-#[derive(Queryable , Insertable , Selectable)]
-#[diesel(table_name = create::schema::posts)]
+#[derive(Queryable, Insertable, Selectable)]
+#[diesel(table_name = crate::schema::User)]
 #[diesel(check_for_backend(diesel::pg::Pg))]
-
-
-struct User {
+struct UserRecord {
     id: String,
     username: String,
     password: String
 }
 
 impl Store {
-    pub fn  sign_up(&mut self , usernamer:String , password: String) -> Result<String, diesel::result::Error> {
+    pub fn sign_up(&mut self, username: String, password: String) -> Result<String, diesel::result::Error> {
         let id = Uuid::new_v4();
-        let u = User {
+        let u = UserRecord {
             username,
             password,
-            id:id.to_string()
+            id: id.to_string()
         };
-        diesel::insert_into(crate::Schema::user::table)
+        diesel::insert_into(crate::schema::User::table)
             .values(&u)
-            .returning(User::as_returning())
+            .returning(UserRecord::as_returning())
             .get_result(&mut self.conn)?;
-        
-        Ok(id.toString())
 
+        Ok(id.to_string())
     }
 
-    pub fn sign_in(&mut self, input_username:String , input_password:String) -> Result<bool , diesel::result::Error>{
-        use crate::schema::user::dsl::*;
+    pub fn sign_in(&mut self, input_username: String, input_password: String) -> Result<bool, diesel::result::Error> {
+        use crate::schema::User::dsl;
 
-        let user_result = user
-            .filter(username.eq(input_username))
-            .select(User::as_select())
+        let user_result = dsl::User
+            .filter(dsl::username.eq(input_username))
+            .select(UserRecord::as_select())
             .first(&mut self.conn)?;
 
-
-        if user_result.paswword != input_password {
+        if user_result.password != input_password {
             return Ok(false);
         }
         Ok(true)

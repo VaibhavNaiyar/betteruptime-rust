@@ -10,7 +10,7 @@ impl Default for Config {
     fn default() -> Self {
         dotenv().ok();
         let db_url = env::var("DATABASE_URL")
-            .unwrap_or_else( | | panic!("please provide the databse_url environment variable ") );
+            .unwrap_or_else( |_| panic!("please provide the databse_url environment variable ") );
         
         Self {
             db_url

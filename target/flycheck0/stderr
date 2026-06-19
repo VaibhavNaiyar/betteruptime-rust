@@ -1,5 +1,5 @@
-   0.275818300s  INFO prepare_target{force=false package_id=api v0.1.0 (E:\betterStack-project\betterRust\api) target="api"}: cargo::core::compiler::fingerprint: fingerprint error for api v0.1.0 (E:\betterStack-project\betterRust\api)/Check { test: false }/TargetInner { name: "api", doc: true, ..: with_path("E:\\betterStack-project\\betterRust\\api\\src\\main.rs", Edition2024) }
-   0.275894300s  INFO prepare_target{force=false package_id=api v0.1.0 (E:\betterStack-project\betterRust\api) target="api"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\betterStack-project\betterRust\target\debug\.fingerprint\api-0e5948f77291143e\bin-api`
+   0.665088600s  INFO prepare_target{force=false package_id=api v0.1.0 (E:\betterStack-project\betterRust\api) target="api"}: cargo::core::compiler::fingerprint: fingerprint error for api v0.1.0 (E:\betterStack-project\betterRust\api)/Check { test: false }/TargetInner { name: "api", doc: true, ..: with_path("E:\\betterStack-project\\betterRust\\api\\src\\main.rs", Edition2024) }
+   0.665207400s  INFO prepare_target{force=false package_id=api v0.1.0 (E:\betterStack-project\betterRust\api) target="api"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\betterStack-project\betterRust\target\debug\.fingerprint\api-0e5948f77291143e\bin-api`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -26,8 +26,8 @@ Stack backtrace:
   18: git_midx_writer_dump
   19: BaseThreadInitThunk
   20: RtlUserThreadStart
-   0.336487700s  INFO prepare_target{force=false package_id=store v0.1.0 (E:\betterStack-project\betterRust\store) target="store"}: cargo::core::compiler::fingerprint: fingerprint error for store v0.1.0 (E:\betterStack-project\betterRust\store)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("store", ["lib"], "E:\\betterStack-project\\betterRust\\store\\src\\lib.rs", Edition2024) }
-   0.336557200s  INFO prepare_target{force=false package_id=store v0.1.0 (E:\betterStack-project\betterRust\store) target="store"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\betterStack-project\betterRust\target\debug\.fingerprint\store-e4a7b0bb4f5afba2\lib-store`
+   0.796807400s  INFO prepare_target{force=false package_id=store v0.1.0 (E:\betterStack-project\betterRust\store) target="store"}: cargo::core::compiler::fingerprint: fingerprint error for store v0.1.0 (E:\betterStack-project\betterRust\store)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("store", ["lib"], "E:\\betterStack-project\\betterRust\\store\\src\\lib.rs", Edition2024) }
+   0.796877300s  INFO prepare_target{force=false package_id=store v0.1.0 (E:\betterStack-project\betterRust\store) target="store"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\betterStack-project\betterRust\target\debug\.fingerprint\store-e4a7b0bb4f5afba2\lib-store`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -55,8 +55,8 @@ Stack backtrace:
   19: git_midx_writer_dump
   20: BaseThreadInitThunk
   21: RtlUserThreadStart
-   0.352749100s  INFO prepare_target{force=false package_id=api v0.1.0 (E:\betterStack-project\betterRust\api) target="api"}: cargo::core::compiler::fingerprint: fingerprint error for api v0.1.0 (E:\betterStack-project\betterRust\api)/Check { test: true }/TargetInner { name: "api", doc: true, ..: with_path("E:\\betterStack-project\\betterRust\\api\\src\\main.rs", Edition2024) }
-   0.352779000s  INFO prepare_target{force=false package_id=api v0.1.0 (E:\betterStack-project\betterRust\api) target="api"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\betterStack-project\betterRust\target\debug\.fingerprint\api-d34847f0f36168cc\test-bin-api`
+   0.825903600s  INFO prepare_target{force=false package_id=api v0.1.0 (E:\betterStack-project\betterRust\api) target="api"}: cargo::core::compiler::fingerprint: fingerprint error for api v0.1.0 (E:\betterStack-project\betterRust\api)/Check { test: true }/TargetInner { name: "api", doc: true, ..: with_path("E:\\betterStack-project\\betterRust\\api\\src\\main.rs", Edition2024) }
+   0.825960100s  INFO prepare_target{force=false package_id=api v0.1.0 (E:\betterStack-project\betterRust\api) target="api"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\betterStack-project\betterRust\target\debug\.fingerprint\api-d34847f0f36168cc\test-bin-api`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -84,4 +84,4 @@ Stack backtrace:
   19: BaseThreadInitThunk
   20: RtlUserThreadStart
     Checking store v0.1.0 (E:\betterStack-project\betterRust\store)
-error: could not compile `store` (lib) due to 11 previous errors; 1 warning emitted
+error: could not compile `store` (lib) due to 11 previous errors
